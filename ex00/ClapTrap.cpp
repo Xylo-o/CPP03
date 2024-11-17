@@ -6,14 +6,19 @@
 /*   By: adprzyby <adprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:05:28 by adprzyby          #+#    #+#             */
-/*   Updated: 2024/11/16 17:43:30 by adprzyby         ###   ########.fr       */
+/*   Updated: 2024/11/17 20:05:35 by adprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
-    std::cout << "ClapTrap " << name << " has been constructed!" << std::endl;
+    std::cout << "ClapTrap " << name << " has been summoned" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& other) {
+    *this = other;
+    std::cout << "ClapTrap " << name << " has been copied" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
@@ -28,7 +33,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << "ClapTrap " << name << " has been destroyed!" << std::endl;
+    std::cout << "ClapTrap " << name << " has been destroyed" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target) {

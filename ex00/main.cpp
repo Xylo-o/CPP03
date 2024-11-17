@@ -6,7 +6,7 @@
 /*   By: adprzyby <adprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:05:37 by adprzyby          #+#    #+#             */
-/*   Updated: 2024/11/16 17:36:45 by adprzyby         ###   ########.fr       */
+/*   Updated: 2024/11/17 20:06:32 by adprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main() {
     claptrap3.beRepaired(10);
     claptrap3.attack("Final stand target");
     
-    std::cout << "\n--- Final State of ClapTraps ---" << std::endl;
+    std::cout << "\n--- Final State of ClapTraps ---\n" << std::endl;
     claptrap1.attack("End test target");
     claptrap1.takeDamage(15);
 
