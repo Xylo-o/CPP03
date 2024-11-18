@@ -6,7 +6,7 @@
 /*   By: adprzyby <adprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:16:26 by adprzyby          #+#    #+#             */
-/*   Updated: 2024/11/18 13:16:28 by adprzyby         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:42:39 by adprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
     hitPoints = 100;
-    energyPoints = 50;
-    attackDamage = 20;
+    energyPoints = 100;
+    attackDamage = 30;
     std::cout << "ScavTrap " << name << " has been summoned" << std::endl;
 }
 

@@ -6,11 +6,12 @@
 /*   By: adprzyby <adprzyby@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:16:05 by adprzyby          #+#    #+#             */
-/*   Updated: 2024/11/18 13:16:08 by adprzyby         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:46:30 by adprzyby         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
     std::cout << "--- CLAPTRAP TESTS ---" << std::endl;
@@ -49,6 +50,17 @@ int main() {
     scavtrap1.takeDamage(30);
     scavtrap1.attack("Cannot attack when down");
     scavtrap1.beRepaired(5);
+
+	std::cout << "\n--- FRAGTRAP TESTS ---" << std::endl;
+    FragTrap fragtrap("Fraggy");
+    fragtrap.attack("Raider");
+    fragtrap.highFivesGuys();
+
+    FragTrap fragCopy(fragtrap);
+    FragTrap fragAssigned = fragtrap;
+
+    fragCopy.highFivesGuys();
+    fragAssigned.attack("Another Raider");
 
     std::cout << "\n--- DESTRUCTION ---" << std::endl;
     return 0;
